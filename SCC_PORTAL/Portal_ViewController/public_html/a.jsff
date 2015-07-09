@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+ <af:panelGroupLayout id="pgl0">
+  <af:commandLink text="GroupesSearch" id="cl2" partialSubmit="true">
+        <af:setPropertyListener from="GroupesSearch" type="action"
+         to="#{test.taskFlowID}"/>                
+      </af:commandLink>
+      <af:commandLink text="Dostors" id="cl1" partialSubmit="true">
+        <af:setPropertyListener from="Dostors" type="action"
+         to="#{test.taskFlowID}"/>                
+      </af:commandLink>
+      <af:commandLink text="Galary" id="cl3" partialSubmit="true">
+        <af:setPropertyListener from="Galary" type="action"
+         to="#{test.taskFlowID}"/>                
+      </af:commandLink>
+  <af:region id="r1" value="#{bindings.Book_Nav_TF2.regionModel}"/>
+ </af:panelGroupLayout> 
+</jsp:root>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:ui="http://java.sun.com/jsf/facelets">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>  
+  
+  <af:pageTemplateDef var="attrs">
+    <af:xmlContent>
+      <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+        <display-name>Main_Template</display-name>
+        <facet>
+          <facet-name>Main_Content</facet-name>
+        </facet>
+      </component>
+    </af:xmlContent>
+ 
+ <af:panelGroupLayout layout="scroll" id="pt_pg2l1">
+      <af:group id="pt_g111" >
+            <af:facetRef facetName="Main_Content"/>
+      </af:group>
+      </af:panelGroupLayout>
+  </af:pageTemplateDef>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:MyBean-->
+</jsp:root>

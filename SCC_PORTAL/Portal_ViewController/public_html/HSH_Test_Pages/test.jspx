@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    
+    <af:document id="d1">
+    <af:resource type="javascript"  source="/Resources/Scripts/core.js" />
+      <af:resource type="javascript" source="/Resources/Scripts/jquery-1.4.1.js" />  
+      <af:form id="f1">
+      
+      <af:resource type="javascript">
+      alert('aa');
+      function centerAlignFull() {
+            var menuCss = document.getElementById("menuCss");
+            var LIs = menuCss.childNodes;
+            var firstLI;
+            var netWidth = 0;
+            for (var i = 0, len = LIs.length; i != len; i++) {
+                if (LIs[i].nodeName == "LI") {
+                    if (!firstLI) firstLI = LIs[i];
+                    netWidth += LIs[i].offsetWidth;
+                }
+            }
+            if (firstLI) firstLI.style.marginLeft = (menuCss.offsetWidth - netWidth) / 2 - 1 + "px";
+        }
+
+        var addToPageLoadEvent = function (el, eventName, eventHandler) {
+            if (el.addEventListener)
+                el.addEventListener(eventName, eventHandler, false);
+            else if (el.attachEvent) //IE
+                el.attachEvent('on' + eventName, eventHandler);
+        };
+
+        addToPageLoadEvent(window, "load", centerAlignFull);
+      </af:resource>
+      <div id="ul_menu" style="width: 970px; height: 38px;">
+       <ul id="menuCss" class="menuTemplate4 decor4_1">
+                        <li><a href="#Web-Menus" class="arrow">البحث</a>
+                            <div class="drop decor4_2 dropToLeft" style="width: 140px;">
+                                <div class='left'>
+                                    <b>البحث عن:</b>
+                                    <div>
+                                        <a onclick="MenuRedirect('/Pages/Rules/Cases_Search.aspx');">الدعاوى  </a>
+                                        <br />
+                                        <a onclick="MenuRedirect('/Pages/Rules/Rules_Search.aspx');">احكام المحكمة </a>
+                                        <br />
+                                        <a onclick="MenuRedirect('/Pages/Rollcourt/rollcourt.aspx');">جلسات المحكمة </a>
+                                        <br />
+                                        <a onclick="MenuRedirect('/Pages/Rollcourt_mofedeen/rollcourt_mofedeen.aspx');">جلسات المفوضين </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--
+                        <li class="separator"></li>
+                        <li><a href="#Web-Menus" class="arrow">الركن الأعلامي</a>
+                            <div class="drop decor4_2 dropToLeft" style="width: 120px;">
+                                <div class='left'>
+                                    <div>
+                                        <a onclick="MenuRedirect('/Pages/News/news.aspx');">الأخبار </a>
+                                        <br />
+                                        <a onclick="MenuRedirect('/Pages/News/job.aspx');">وظائف شاغرة </a>
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        -->
+
+                        <li class="separator"></li>
+                        <li><a class="arrow" href="#">المجلة</a>
+                            <div class="drop decor4_2 dropToLeft" style="width: 280px;">
+                                <b>اعداد المجلة</b>
+                                <br />
+                                <div class='left'>
+                                    <div>
+                                        <a onclick="MenuRedirect('/Pages/elmglacourt/eladdel19.aspx');">التاسع عشر</a><br />
+                                        <a onclick="MenuRedirect('/Pages/elmglacourt/eladdel20.aspx');">العشرون</a><br />
+                                        <a onclick="MenuRedirect('/Pages/elmglacourt/eladdel21.aspx');">الحادى العشرون</a><br />
+                                        <a onclick="MenuRedirect('/Pages/elmglacourt/eladdel22.aspx');">الثانى والعشرون</a><br />
+                                        <a onclick="MenuRedirect('/Pages/elmglacourt/eladdel23.aspx');">الثالث والعشرون</a><br />
+                                        <a onclick="MenuRedirect('/Pages/elmglacourt/eladdel24.aspx');">الرابع والعشرون</a><br />
+                                        <a onclick="MenuRedirect('/Pages/elmglacourt/eladdel25.aspx');">الخامس والعشرون</a><br />
+                                    </div>
+                                </div>
+                                <div class='left' style="width: 10px; height: 200px;">
+                                </div>
+                                <div class='left' style="background-color: #B03A3A; width: 4px; height: 200px;">
+                                </div>
+                                <div class='left'>
+                                    <div>
+                                        <a onclick="MenuRedirect('/Pages/elmglacourt/chairmanword.aspx?id=1');">الثاني عشر
+                                        </a>
+                                        <br />
+                                        <a onclick="MenuRedirect('/Pages/elmglacourt/eladdelsalthahwer1.aspx');">الثالث عشر
+                                        </a>
+                                        <br />
+                                        <a onclick="MenuRedirect('/Pages/elmglacourt/eladdelrabaaasher1.aspx');">الرابع عشر</a><br />
+                                        <a onclick="MenuRedirect('/Pages/elmglacourt/eladdelkamsasher1.aspx');">الخامس عشر
+                                        </a>
+                                        <br />
+                                        <a onclick="MenuRedirect('/Pages/elmglacourt/eladdel16.aspx');">السادس عشر</a><br />
+                                        <a onclick="MenuRedirect('/Pages/elmglacourt/eladdel17.aspx');">السابع عشر</a><br />
+                                        <a onclick="MenuRedirect('/Pages/elmglacourt/eladdel18.aspx');">الثامن عشر</a><br />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="separator"></li>
+                        <li><a class="arrow" href="#">وثائق</a>
+                            <div class="drop decor4_2 dropToLeft" style="width:380px;">
+                                  <div class='left'>
+                                    <b>رقابة سابقة</b>
+                                    <div>
+                                        <a onclick="MenuRedirect('/Pages/Rollcourt/controlback.aspx');">رقابة سابقة</a><br />
+                                    </div>
+                                    </div>
+                                <div class='left' style="width: 10px; height: 150px;"></div>
+                                <div class='left' style="background-color: #B03A3A; width: 4px; height: 150px;"></div>
+                                <div class='left'>
+                                    <b>قرارات</b>
+                                    <div>
+                                        <a onclick="MenuRedirect('/Pages/CourtLaws/Constitutional_court.aspx');">انشاء المحكمة</a><br />
+                                    </div>
+                                    <b>قوانين</b>
+                                    <div>
+                                        <a onclick="MenuRedirect('/Pages/CourtLaws/Highlycourtlaw.aspx');">قانون المحكمة</a><br />
+                                    </div>
+                                </div>
+                                <div class='left' style="width: 10px; height: 150px;">
+                                </div>
+                                <div class='left' style="background-color: #B03A3A; width: 4px; height: 150px;">
+                                </div>
+                                <div class='left'>
+                                    <b>دساتير</b>
+                                    <div>
+                                        <a onclick="MenuRedirect('/Pages/Constitutions/EgyptConstitution2.aspx');">الدستور الحالي</a><br />
+                                        <a onclick="MenuRedirect('/Pages/Constitutions/Constitution1.aspx');">دساتير سابقة</a><br />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="separator"></li>
+                        <li><a class="arrow" href="#">اعضاء المحكمة </a>
+                            <div class="drop decor4_2 dropToLeft" style="width:520px;">
+                                <div class='left'>
+                                    <b>تشكيل هيئة المفوضين</b>
+                                    <div>
+                                        <a onclick="MenuRedirect('/Pages/CourtMembers/SupremeCourtDeputyChairman.aspx?Position=8');">
+                                            رؤساء هيئة المفوضين الحاليون </a>
+                                        <br />
+                                        <a onclick="MenuRedirect('/Pages/CourtMembers/SupremeCourtDeputyChairman.aspx?Position=9');">
+                                            أعضاء هيئة المفوضين الحاليون </a>
+                                        
+                                    </div>
+                                    <b>رؤساء واعضاء هيئة المفوضين السابقون</b>
+                                    <div>
+                                        <a onclick="MenuRedirect('/Pages/CourtMembers/SupremeCourtChairmans.aspx?Category=8');">
+                                            رؤساء هيئة المفوضين السابقون</a><br />
+                                        <a onclick="MenuRedirect('/Pages/CourtMembers/SupremeCourtChairmans.aspx?Category=9');">
+                                            اعضاء هيئة المفوضين السابقون</a><br />
+                                    </div>
+                                </div>
+                                <div class='left' style="width: 5px; height: 200px;">
+                                </div>
+                                <div class='left' style="background-color: #B03A3A; width: 4px; height: 200px;">
+                                </div>
+                                <div class='left' style="width: 5px; height: 200px;">
+                                </div>
+                                <div class='left'>
+                                    <b>التشكيل الحالى للمحكمة</b>
+                                    <div>
+                                        <a onclick="MenuRedirect('/Pages/CourtMembers/CurrentCourt.aspx');">التشكيل الحالى</a><br />
+                                        <br />
+                                    </div>
+                                    <b>رؤساء ونواب الدستورية العليا</b>
+                                    <div>
+                                        <a onclick="MenuRedirect('/Pages/CourtMembers/SupremeCourtChairmans.aspx?Category=6');">
+                                            رؤساء السابقون</a><br />
+                                        <a onclick="MenuRedirect('/Pages/CourtMembers/SupremeCourtChairmans.aspx?Category=7');">
+                                            نواب رئيس الدستورية العليا السابقون</a><br />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="separator"></li>
+                        <li><a href="#Web-Menus" class="arrow">عن المحكمة</a>
+                            <div class="drop decor4_2 dropToLeft" style="width: 200px;">
+                                <div class='left'>
+                                    <b>كلمات</b>                                      
+                                    <div>
+                                        <a onclick="MenuRedirect('/Pages/About/chairmanword_current.aspx');">كلمة رئيس المحكمة </a><br />
+                                        <a onclick="MenuRedirect('/Pages/About/chairmanword.aspx');">كلمة رئيس المحكمة السابق  </a><br />                                        
+                                    </div>
+                                    <b>المحكمة</b>
+                                    <div>
+                                        <a onclick="MenuRedirect('/Pages/About/Court_Opening.aspx');">التعريف بالمحكمة </a>
+                                        <br />
+                                        <a onclick="MenuRedirect('/Pages/About/history.aspx');">لمحة تاريخية </a>
+                                        <br />
+                                        <a onclick="MenuRedirect('/Pages/About/About.aspx');">مبني المحكمة </a><br />
+                                        <a onclick="MenuRedirect('/Pages/PhotoGallery/PhotoGallery.aspx');">البوم الصور</a><br />
+                                        <a onclick="MenuRedirect('/Pages/Statistics/CourtStatistics.aspx');">المحكمة فى ارقام</a><br />
+                                        <a onclick="MenuRedirect('/Pages/Statistics/DailyReport.aspx');">التقرير اليومى</a><br />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+       </div>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>
