@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/**ADFFaces_Skin_File / DO NOT REMOVE**/
+@namespace af "http://xmlns.oracle.com/adf/faces/rich";
+@namespace dvt "http://xmlns.oracle.com/dss/adf/faces";
+
+@import url('http://fonts.googleapis.com/css?family=Droid Arabic Kufi');
+
+.AFDefaultFont:alias,body
+{
+	font: 0.813em/1.5em 'Droid Arabic Kufi', sans-serif !important;
+        font-size: large;
+}
+af|table af|column::column-header-cell{   
+    border:White 1px solid;       // the grid lines  
+    border-bottom: Red 2px solid ;
+    text-align: center;
+    text-overflow:ellipsis ;
+    vertical-align: middle;
+}
+af|column::column-header-cell-content {
+    background-color:#FCAD46;
+    font-weight: bold;
+    height:30px;
+    color:White;
+    text-align: center;
+    text-overflow:ellipsis ;
+    vertical-align: middle;
+    font: 0.813em/2 em 'Droid Arabic Kufi', sans-serif !important;
+    font-size:8pt; 
+}
+af|table{
+   border:none; // removes outer border
+   height:231px; // scaled to fit the max number of rows return from pagination
+}
+
+af|table::data-table-VH-lines af|column::data-cell{
+    background-color:#F1F1F1;
+    height:35px;
+    font: 0.813em/2 em 'Droid Arabic Kufi', sans-serif !important;
+    font-size:11pt;
+    border: rgb(191,191,191)  1px  solid; // grid lines
+    padding-right:0px;
+}
+af|table::data-table-VH-lines af|column::data-cell.boldcols{
+  font-weight:bold;
+  text-align: right;
+}
+af|table::data-table-VH-lines af|column::data-cell.boldcols{
+  font-weight:bold;
+  text-align: right;
+}
+af|table::data-row:Selected:Focused af|column::data-cell{
+    background-color: #C9131B;
+    font-weight:bold;
+    color:white;
+     border:White 1px solid; // the grid lines
+}
+
+
+
+af|inputText {
+    border-color: Black; 
+    height: 30px;
+    font: 0.813em/2 em 'Droid Arabic Kufi', sans-serif !important;
+    font-size:10pt; 
+    }
+
+af|inputText::content {
+    border-color: Black; 
+    font-style: normal;
+    font: 0.813em/2 em 'Droid Arabic Kufi', sans-serif !important;
+    font-size:10pt; 
+    height: 30px;
+}
+
+af|column::column-filter-cell {
+    border-color: #686868; 
+    border: thin; 
+    color: Black; 
+    background-image: none; 
+}
+
+af|tree {
+    border-color: Black; 
+    font-size: medium; 
+            }
+
+af|treeTable {
+    text-align: right; 
+    font-size: medium; 
+    color: Black; 
+}
+
+af|column::banded-data-cell {
+    border-color: #434343; 
+}
+
+af|column::data-cell {
+    border: thin; 
+    font-size: medium; 
+    color: Black; 
+    font-family: Arial; 
+    border-color: Black; 
+}
+
+.AFTableCellFrozenBorder:alias {
+    border: medium; 
+    border-color: #844200; 
+}
+
+
+af|tree::collapsed-icon-style {
+    height: 15px; 
+    width: 15px; 
+}
+
+af|tree::data-cell {
+    width: 15px; 
+    font-size:small; 
+    tab-size:6;
+}
+
+af|commandLink {
+    width: 15px; 
+    font-size:small; 
+    tab-size:6; 
+}
+

@@ -1,0 +1,3 @@
+﻿/Portal_Pages/Welcome.jspx,الرئيسية
+/Portal_Pages/chairmanword.jspx,عن المحكمة>كلمة رئيس المحكمة
+/Portal_Pages/AboutCourt.jspx,عن المحكمة>التعريف بالمحكمة
